@@ -44,9 +44,10 @@
             <h1>gm.dragDrop</h1>
             <h4>Reordering</h4>
             <p>Demonstrates using
-                <code>gm-on-hover</code> to apply logic and reorder items. Also demonstrates a dedicated drag area using
+                <code>gm-on-hover</code> to apply logic and reorder items. Also demonstrates drag area using
                 <code>gm-drag-handle</code>
             </p>
+            <!-- ng-class="box-{{$index}}" use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences???-->
             <div class="list-group">
                 <div class="view_level_3" ng-repeat="item in orderedItems | orderBy: 'order' " gm-draggable="item" gm-on-invalid-drop="reset"
                     gm-on-drop="reorder" gm-on-hover="onHover(item)">
