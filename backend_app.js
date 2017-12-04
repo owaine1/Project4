@@ -14,5 +14,5 @@ backend_app.use(routes);
 
 backend_app.listen(port, listening);
 function listening() {
-    console.log('broadcasting on localhoast:' + port);
+    console.log('broadcasting on localhost:' + port);
 }

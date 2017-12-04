@@ -13,7 +13,7 @@ console.log('loaded frontend_app');
 // });
 // }
 // not my code. borrowed
-console.log('loaded frontend_app');
+
 
 (function () {
     'use strict';
@@ -43,24 +43,24 @@ console.log('loaded frontend_app');
         ];
         $rootScope.orderedItems = [
             {
-                number: 1,
+
                 order: 1,
-                value: "One"
+                value: "Repositories"
             },
             {
-                number: 2,
+
                 order: 2,
-                value: "Two"
+                value: "Contributions"
             },
             {
-                number: 3,
+
                 order: 3,
-                value: "Three"
+                value: "Followers"
             },
             {
-                number: 4,
+
                 order: 4,
-                value: "Four"
+                value: "Following"
             }
         ];
         $rootScope.onHover = function (item) {
