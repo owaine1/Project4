@@ -7,7 +7,7 @@ router.get('/', do_homepage);
 
 function do_homepage(req, res) {
     console.log('do homepage');
-    res.render('index');
+    res.render('signin');
 }
 // api
 
