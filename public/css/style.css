@@ -1,0 +1,114 @@
+body {
+    background-color: lightgreen;
+}
+
+h1 {
+    position: center;
+    color: rgb(45, 99, 45);
+}
+
+form {
+    position: absolute;
+    margin: auto;
+    right: 50%;
+    border: 5px solid #ccc;
+    border-radius: 20px;
+    background-color: #eee;
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: rgb(226, 245, 234)
+    }
+    .nav-buttons {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 0%;
+    }
+}
+.btn {
+    width: 100px
+}
+
+.view_level_1 {
+    display: inline-flex;
+    clear: both;
+}
+
+div .view_level_3 {
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: lightblue;
+    position: relative;
+    top: 20%;
+    left: 50%;
+    margin: 10px;
+    width: 250px;
+    height: 250px;
+}
+
+.empty {
+    display: inline-block;
+    border: dashed 5px black;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+}
+
+.deselected {
+    display: flex-inline;
+}
+
+
+/* .level_3 {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 50%;
+    }
+    .view1,
+    .view2,
+    .view3,
+    .view4 {
+        border: 20px 20px solid black;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color: green;
+    }
+    
+    .level_1,
+    .level_2 {
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        right: 50%;
+    }
+    div .view_level_3  {
+        border: 1px solid black;
+        border-radius: 10px;
+        background-color: lightblue;
+        padding-top: 80px;
+        padding-right: 80px;
+        padding-bottom: 80px;
+        padding-left: 80px;
+    }
+} */
+.gm-drag-element {
+    opacity: 0.3;
+  }
+  
+  .gm-dragging {
+    background-color: lightgrey;
+  }
+  
+  .gm-drag-handle {
+    cursor: grab;
+  }
+  
+  .panel.gm-dropping {
+    box-shadow: 0px 0px 2px black;
+  }
