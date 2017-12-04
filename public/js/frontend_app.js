@@ -19,7 +19,7 @@ console.log('loaded frontend_app');
     'use strict';
     // Based on myDraggable - https://docs.angularjs.org/guide/directive
     angular
-        .module('app', ['gm.dragDrop'])
+        .module('git-app', ['gm.dragDrop'])
         .run(run);
     function run($rootScope, $filter) {
         $rootScope.categories = [
@@ -43,22 +43,18 @@ console.log('loaded frontend_app');
         ];
         $rootScope.orderedItems = [
             {
-
                 order: 1,
                 value: "Repositories"
             },
             {
-
                 order: 2,
                 value: "Contributions"
             },
             {
-
                 order: 3,
                 value: "Followers"
             },
             {
-
                 order: 4,
                 value: "Following"
             }
