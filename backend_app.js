@@ -34,20 +34,19 @@ mongoose.connect(configDB.url, {
 });
 
 require('./config/passport')(passport);
-
-app.use(cookieParser()); 
-app.use(bodyParser()); 
+app.use(cookieParser());
+app.use(bodyParser());
 app.set('view engine', 'ejs');
 app.use(session({
     secret: 'myamazingapp'
 }));
 app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(passport.session());
+app.use(flash());
 
-// routes ======================================================================
-require('./app/routes/main_routes.js')(app, passport); // load our routes and pass in our app and fully configured passport
+// routes
+require('./app/routes/main_routes.js')(app, passport); // load routes
 
-// launch ======================================================================
+// launch
 app.listen(port);
 console.log('The magic happens on port ' + port);
