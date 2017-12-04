@@ -1,46 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="public/css/style.css">
-<script src="public/js/script.js"></script>
+<% include ../partials/header.ejs %>
 
-<head>
-    <meta charset="UTF-8">
-    <title>Help</title>
-</head>
-
-<body>
-    <div class="level_1 nav-buttons">
-        <div class="level_2">
-            <div class="level_3">
-                <a href="index.html">
-                    <button ng-route="" class="btn btn-primary btn-lg" title="https://github.com/owaine1">GitHub</button>
-                </a>
+    <body>
+        <div class="level_1 nav-buttons">
+            <div class="level_2">
+                <div class="level_3">
+                    <a href="index.html">
+                        <button ng-route="" class="btn btn-primary btn-lg" title="https://github.com/owaine1">GitHub</button>
+                    </a>
+                </div>
+                <div class="level_3">
+                    <a href="gists.html">
+                        <button class="btn btn-info btn-lg" title="https://gist.github.com/">Gists</button>
+                    </a>
+                </div>
             </div>
-            <div class="level_3">
-                <a href="gists.html">
-                    <button class="btn btn-info btn-lg" title="https://gist.github.com/">Gists</button>
-                </a>
-            </div>
-        </div>
-        <div class="level_2">
-            <div class="level_3">
-                <button class="btn btn-info btn-lg" title="https://help.github.com/">Help</button>
-            </div>
-            <div class="level_3">
-                <a href="signout.html">
-                    <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item dropdown-signout
+            <div class="level_2">
+                <div class="level_3">
+                    <button class="btn btn-info btn-lg" title="https://help.github.com/">Help</button>
+                </div>
+                <div class="level_3">
+                    <a href="signout.html">
+                        <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item dropdown-signout
                         &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt;
                                 Sign out
                                 &lt;/button&gt;">Sign out</button>
-                </a>
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-   
-    <p>Goto GitHub Help page (https://help.github.com/)with a skin around it showing you nav buttons</p>
-    <iframe src="https://help.github.com/" height="500" width="500" style="border:none;"></iframe>
 
-</body>
+        <p>Goto GitHub Help page (https://help.github.com/)with a skin around it showing you nav buttons</p>
+        <iframe src="https://help.github.com/" height="500" width="500" style="border:none;"></iframe>
+
+    </body>
 
 </html>

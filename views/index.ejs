@@ -1,91 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
-    <script src="js/gm.dragDrop.js"></script>
-    <script src="js/frontend_app.js"></script>
-    <meta charset="UTF-8">
-    <title>Github mock site</title>
-</head>
+<% include ../partials/header.ejs %>
 
-<!-- <body ng-controller="github-app"> -->
+    <!-- <body ng-controller="github-app"> -->
 
-<body ng-app="app">
-    <h1>Github mock site</h1>
-    <!-- navbars top right -->
-    <!-- on click buttons should go to a btn-default bootstrap -->
-    <div class="level_1 nav-buttons">
-        <div class="level_2">
-            <div class="level_3">
-                <!-- <a href="settings.html"> -->
-                <button ng-route="" class="btn btn-primary btn-lg" title="https://github.com/owaine1">Settings</button>
-                <!-- </a> -->
+    <body ng-app="app">
+        <h1>Github mock site</h1>
+        <!-- navbars top right -->
+        <!-- on click buttons should go to a btn-default bootstrap -->
+        <div class="level_1 nav-buttons">
+            <div class="level_2">
+                <div class="level_3">
+                    <!-- <a href="settings.html"> -->
+                    <button ng-route="" class="btn btn-primary btn-lg" title="https://github.com/owaine1">Settings</button>
+                    <!-- </a> -->
+                </div>
+                <div class="level_3">
+                    <!-- <a href="gists.html"> -->
+                    <button class="btn btn-info btn-lg" title="https://gist.github.com/">Gists</button>
+                    <!-- </a> -->
+                </div>
             </div>
-            <div class="level_3">
-                <!-- <a href="gists.html"> -->
-                <button class="btn btn-info btn-lg" title="https://gist.github.com/">Gists</button>
-                <!-- </a> -->
-            </div>
-        </div>
-        <div class="level_2">
-            <div class="level_3">
-                <!-- <a href="help.html"> -->
-                <button class="btn btn-info btn-lg" title="https://help.github.com/">Help</button>
-                <!-- </a> -->
-            </div>
-            <div class="level_3">
-                <!-- <a href="signout.html"> -->
-                <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item dropdown-signout
+            <div class="level_2">
+                <div class="level_3">
+                    <!-- <a href="help.html"> -->
+                    <button class="btn btn-info btn-lg" title="https://help.github.com/">Help</button>
+                    <!-- </a> -->
+                </div>
+                <div class="level_3">
+                    <!-- <a href="signout.html"> -->
+                    <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item dropdown-signout
                     &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt;
                             Sign out
                             &lt;/button&gt;">Sign out</button>
-                <!-- </a> -->
-            </div>
-        </div>
-    </div>
-
-    <!-- main 4 views -->
-    <div class='container'>
-        <h1>gm.dragDrop</h1>
-        <h4>Reordering</h4>
-        <p>Demonstrates using
-            <code>gm-on-hover</code> to apply logic and reorder items. Also demonstrates a dedicated drag area using
-            <code>gm-drag-handle</code>
-        </p>
-        <div class="list-group">
-            <div class="list-group-item view_level_3" " ng-repeat="item in orderedItems | orderBy: 'order' " gm-draggable='item' gm-on-invalid-drop='reset'
-                gm-on-drop='reorder' gm-on-hover='onHover(item)'">
-                {{item.value}}
-                <div class='pull-right gm-drag-handle'>
-                    <span class='glyphicon glyphicon-move'></span>
+                    <!-- </a> -->
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="view_level_1">
-        <div class="view_level_2">
-            <div id="view1 " class="view_level_3" ng-view="">Repositories
-                <div class="inside "></div>
-            </div>
-            <div id="view2 " class="view_level_3" ng-view>Contributions
-                <div class="inside "></div>
+        <!-- main 4 views -->
+        <div class='container'>
+            <h1>gm.dragDrop</h1>
+            <h4>Reordering</h4>
+            <p>Demonstrates using
+                <code>gm-on-hover</code> to apply logic and reorder items. Also demonstrates a dedicated drag area using
+                <code>gm-drag-handle</code>
+            </p>
+            <div class="list-group">
+                <div class="view_level_3" ng-repeat="item in orderedItems | orderBy: 'order' " gm-draggable="item" gm-on-invalid-drop="reset"
+                    gm-on-drop="reorder" gm-on-hover="onHover(item)">
+                    {{item.value}}
+                    <div class="pull-right gm-drag-handle">
+                        <span class="glyphicon glyphicon-move"></span>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="view_level_2">
-            <div id="view3 " class="view_level_3" ng-view>Followers
-                <div class="inside "></div>
+
+        <div class="view_level_1">
+            <div class="view_level_2">
+                <div id="view1 " class="view_level_3" ng-view="">Repositories
+                    <div class="inside "></div>
+                </div>
+                <div id="view2 " class="view_level_3" ng-view>Contributions
+                    <div class="inside "></div>
+                </div>
             </div>
-            <div id="view4 " class="view_level_3" ng-view>Following
-                <div class="inside "></div>
+            <div class="view_level_2">
+                <div id="view3 " class="view_level_3" ng-view>Followers
+                    <div class="inside "></div>
+                </div>
+                <div id="view4 " class="view_level_3" ng-view>Following
+                    <div class="inside "></div>
+                </div>
             </div>
         </div>
-    </div>
+    </body>
 
-
-</body>
-
-</html>∏
+</html>
