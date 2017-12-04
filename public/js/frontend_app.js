@@ -17,7 +17,7 @@ console.log('loaded frontend_app');
 
 (function () {
     'use strict';
-    // Based on myDraggable - https://docs.angularjs.org/guide/directive
+    // Some Based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
     angular
         .module('git-app', ['gm.dragDrop'])
         .run(run);

@@ -48,6 +48,7 @@
                 <code>gm-drag-handle</code>
             </p>
             <!-- ng-class="box-{{$index}}" use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences???-->
+            <!-- look at https://www.w3schools.com/angular/angular_routing.asp -->
             <div class="list-group">
                 <div class="view_level_3" ng-repeat="item in orderedItems | orderBy: 'order' " gm-draggable="item" gm-on-invalid-drop="reset"
                     gm-on-drop="reorder" gm-on-hover="onHover(item)">
