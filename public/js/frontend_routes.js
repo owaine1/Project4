@@ -1,4 +1,13 @@
-
+// var git_app = angular.module('git-app', []); note for ref, this is in frontend_app.js and function/s
+// below will be called by frontent_app.js
+// another tut suggests:
+// git_app.config(function ($routeProvider){
+//     $routeProvider.when(
+//         blaaaaah
+//     )
+// }
+// .otherwise({ redirectTo: '/' });
+// });
 function do_routes($routeProvider) {
     console.log('doing frontend routes');
     $routeProvider.when(
