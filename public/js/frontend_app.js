@@ -13,15 +13,23 @@ console.log('loaded frontend_app');
 // });
 // }
 
-
+// -    -   -   -   -
 // var frontend_app = angular.module('git-app', ['ngRoute']);
 // console.log('loaded frontend_app still');
 // frontend_app.controller(main_view);
-
 // function main_view($scope) {
 //     console.log('looking at main_view func');
 //     // $scope.person = { name: "AMMMAZZING" };
 // }
+// -    -   -   -   -
+
+// W3s!;)
+// var app = angular.module('myApp', []);
+// app.controller('myCtrl', function ($scope, $http) {
+//     $http.get("welcome.htm").then(function (response) {
+//         $scope.myWelcome = response.data;
+//     });
+// });
 
 // not my code. borrowed and adapted
 // Most based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive

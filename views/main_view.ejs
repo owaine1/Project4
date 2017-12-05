@@ -5,7 +5,7 @@
 
     <!-- <body ng-controller="main_view_controller"> -->
 
-    <body ng-controller="main_view_controller">
+    <body>
         <h1>Github interface using API (eventually!)</h1>
         <h2>{{person.name}}</h2>
         <!-- navbars top right -->
@@ -32,15 +32,15 @@
                 </div>
                 <div class="level_3">
                     <!-- <a href="signout.html"> -->
-                    <button class="tn btn-primary btn-lg " title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item
-        dropdown-signout &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt; Sign out &lt;/button&gt; ">Sign out</button>
+                    <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item
+        dropdown-signout &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt; Sign out &lt;/button&gt;">Sign out</button>
                     <!-- </a> -->
                 </div>
             </div>
         </div>
 
         <!-- main 4 views -->
-        <div class='container'>
+        <div class="container">
             <h1>gm.dragDrop</h1>
             <!-- <h4>Reordering</h4>
             <p>Demonstrates using
@@ -49,35 +49,41 @@
             </p> -->
             <!-- ng-class="box-{{$index}} " use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences???-->
             <!-- look at https://www.w3schools.com/angular/angular_routing.asp -->
-            <div class="list-group ">
-                <div class="view_level_3 " ng-repeat="item in orderedItems | orderBy: 'order' " gm-draggable="item
-        " gm-on-invalid-drop="reset " gm-on-drop="reorder " gm-on-hover="onHover(item) ">
+            <div class="list-group">
+                <div class="view_level_3" ng-repeat="item in orderedItems | orderBy: 'order'" gm-draggable="item" gm-on-invalid-drop="reset"
+                    gm-on-drop="reorder" gm-on-hover="onHover(item)">
                     {{item.value}}
-                    <div class="pull-right gm-drag-handle ">
-                        <span class="glyphicon glyphicon-move "></span>
+                    <div class="pull-right gm-drag-handle">
+                        <span class="glyphicon glyphicon-move"></span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="view_level_1 ">
-            <div class="view_level_2 ">
-                <div id="view1 " class="view_level_3 " ng-view>Repositories
+        <div class="view_level_1">
+            <div class="view_level_2">
+                <div id="view1 " class="view_level_3" ng-view>Repositories
                     <div class="inside "></div>
                 </div>
-                <div id="view2 " class="view_level_3 " ng-view>Contributions
+                <div id="view2 " class="view_level_3" ng-view>Contributions
                     <div class="inside "></div>
                 </div>
             </div>
-            <div class="view_level_2 ">
-                <div id="view3 " class="view_level_3 " ng-view>Followers
+            <div class="view_level_2">
+                <div id="view3 " class="view_level_3" ng-view>Followers
                     <div class="inside "></div>
                 </div>
-                <div id="view4 " class="view_level_3 " ng-view>Following
-                    <div class="inside "></div>
+                <div id="view4 " class="view_level_3" ng-view>Following
+                    <div class="inside"></div>
                 </div>
             </div>
         </div>
+        <p>Additional functionality
+            <br>Likely if can use some angular directives like:
+            <br>ngmodel
+            <br>ngclick (obviously) also function on a click
+            <br>ngrepeat in someway (mostlikely a list/table), could be selecting (or creating) tags and showing popularity from api as a type of top 10 with number of repos using x technology (e.g. react, angular/whatever???
+        </p>
     </body>
 
 </html>
