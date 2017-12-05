@@ -1,3 +1,5 @@
+// this is duplicated at mongodb/creds.js 
+
 module.exports = {
     'githubAuth': {
         'clientID': 'd3d6770887dd079d7959',
