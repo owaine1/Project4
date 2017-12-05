@@ -30,7 +30,7 @@ console.log('loaded frontend_app');
 //         $scope.myWelcome = response.data;
 //     });
 // });
-
+// N.B. from Angjs 1.3 functions are not 
 // not my code. borrowed and adapted
 // Most based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
 (function () {
