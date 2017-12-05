@@ -37,8 +37,8 @@ function do_routes($routeProvider) {
             controller: 'settings_controller'
         })
         .when(
-        '/signout', {
-            templateUrl: 'views/signout.ejs',
+        '/logout', {
+            templateUrl: 'views/logout.ejs',
             controller: 'signout_controller'
         });
 }

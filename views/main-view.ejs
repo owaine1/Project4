@@ -5,7 +5,7 @@
 
     <!-- <body ng-controller="github-app"> -->
 
-    <body ng-app="git-app">
+    <body ng-app="git-app" ng-view>
         <h1>Github interface using API (eventually!)</h1>
         <!-- navbars top right -->
         <!-- on click buttons should go to a btn-default bootstrap -->
@@ -13,7 +13,7 @@
             <div class="level_2">
                 <div class="level_3">
                     <!-- <a href="settings.html"> -->
-                    <button ng-route="" class="btn btn-primary btn-lg" title="https://github.com/owaine1">Settings</button>
+                    <button ng-route="#!settings" class="btn btn-primary btn-lg" title="https://github.com/owaine1">Settings</button>
                     <!-- </a> -->
                 </div>
                 <div class="level_3">
