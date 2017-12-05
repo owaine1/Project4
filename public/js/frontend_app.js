@@ -12,9 +12,10 @@ console.log('loaded frontend_app');
 //     console.log($scope.github_users);
 // });
 // }
+
+
+
 // not my code. borrowed
-
-
 (function () {
     'use strict';
     // Some Based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
