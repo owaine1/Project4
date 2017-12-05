@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="git-app">
+<% include ../partials/header.ejs %>
+
+    <body>
+        <h1>Some Angular features</h1>
+        <div>
+            <h2>View1</h2>
+            Name:
+            <input type="text" ng-model="filter.name" />
+            <br/>
+            <ul>
+                <li ng-repeat="cust in customers | filter:filter.name |"></li>
+            </ul>
+            <br/> Customer Name:
+            <br/>
+            <button ng-click="addCustomer()">Add Customer</button>
+        <a href="#/view2">View 2</a>
+        </div>
+    </body>
+
+</html>
