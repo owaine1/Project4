@@ -15,3 +15,10 @@ function do_routes($routeProvider) {
       templateUrl: 'partials/logged_in.html'
     });
   }
+
+  gists.ejs
+  help.ejs
+  main-view.ejs
+  repos-main-page.ejs
+  settings.ejs
+  signout.ejs
