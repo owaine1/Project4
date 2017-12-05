@@ -30,6 +30,9 @@ console.log('loaded frontend_app');
         // function do_login($scope, $http) {
             
         // }
+        function main-view($scope){
+            
+        }
     function run($rootScope, $filter) {
         $rootScope.categories = [
             {
