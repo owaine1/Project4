@@ -15,11 +15,13 @@ console.log('loaded frontend_app');
 
 
 var frontend_app = angular.module('git-app', ['ngRoute']);
-
+console.log('loaded frontend_app still');
 frontend_app.controller(main_view);
+
 function main_view($scope) {
+    console.log('loaded frontend_app even still');
     console.log('looking at main-view func');
-    $scope.person = { name: "AMMMAZZING" };
+    // $scope.person = { name: "AMMMAZZING" };
 }
 
 // not my code. borrowed

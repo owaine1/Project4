@@ -13,23 +13,19 @@ function do_routes($routeProvider) {
         })
         .when(
         '/', {
-            templateUrl: 'views/main-view.ejs',
-            controller: 'main-view_controller'
+            templateUrl: 'views/main_view.ejs',
+            controller: 'main_view_controller'
         })
         .when(
         '/help', {
             templateUrl: 'views/help.ejs',
             controller: 'help_controller'
         })
-        .when(
-        '/', {
-            templateUrl: 'views/main-view.ejs',
-            controller: 'main-view_controller'
-        })
+        
         .when(
         '/repos-main-page', {
-            templateUrl: 'views/repos-view.ejs',
-            controller: 'repos-view_controller'
+            templateUrl: 'views/repos_view.ejs',
+            controller: 'repos_view_controller'
         })
         .when(
         '/settings', {
