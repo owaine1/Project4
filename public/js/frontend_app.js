@@ -13,17 +13,17 @@ console.log('loaded frontend_app');
 // });
 // }
 
-var frontend_app = angular.module('git-app', ['ngRoute']);
-console.log('loaded frontend_app still');
-frontend_app.controller(main_view);
 
-function main_view($scope) {
-    console.log('loaded frontend_app even still');
-    console.log('looking at main_view func');
-    // $scope.person = { name: "AMMMAZZING" };
-}
+// var frontend_app = angular.module('git-app', ['ngRoute']);
+// console.log('loaded frontend_app still');
+// frontend_app.controller(main_view);
 
-// not my code. borrowed
+// function main_view($scope) {
+//     console.log('looking at main_view func');
+//     // $scope.person = { name: "AMMMAZZING" };
+// }
+
+// not my code. borrowed and adapted
 // Most based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
 (function () {
     'use strict';
@@ -32,11 +32,9 @@ function main_view($scope) {
         .run(run);
     // to implement
     // frontend_app.config(do_routes);
-    // frontend_app.controller('home_controller', do_home_controller);
+    // frontend_app.controller('main_view_controller', do_main_view_controller);
     // frontend_app.controller('login_controller', do_login_controller);
-
     // function do_login($scope, $http) {
-
     // }
 
     function run($rootScope, $filter) {
