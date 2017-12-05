@@ -7,7 +7,6 @@ function github_passport(User, passport, configAuth) {
         callbackURL: configAuth.githubAuth.callbackURL,
         passReqToCallback: true
     },
-
         //   wonder if need req; need accessToken, cb. added done
         function (req, token, refreshToken, profile, done) {
             process.nextTick(function () {
@@ -18,7 +17,6 @@ function github_passport(User, passport, configAuth) {
                         if (err)
                             return done(err);
                         if (user) {
-
                             if (!user.github.token) {
                                 user.github.token = token;
                                 user.github.name = profile.name.givenName
@@ -62,7 +60,6 @@ module.exports = github_passport;
 
 // from https://github.com/jaredhanson/passport-github#configure-strategy
 // var GitHubStrategy = require('passport-github').Strategy;
-
 // passport.use(new GitHubStrategy({
 //     clientID: GITHUB_CLIENT_ID,
 //     clientSecret: GITHUB_CLIENT_SECRET,
