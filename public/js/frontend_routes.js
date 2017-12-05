@@ -33,7 +33,7 @@ function do_routes($routeProvider) {
         })
         .when(
         '/settings', {
-            templateUrl: 'views/settings.ejs',
+            templateUrl: 'settings.ejs',
             controller: 'settings_controller'
         })
         .when(
