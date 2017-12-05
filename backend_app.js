@@ -30,25 +30,5 @@ function listening() {
     console.log('broadcasting on localhost:' + port);
 }
 
-// app.use(express.static('public'));
-// mongoose.connect(configDB.url, {
-//     useMongoClient: true
-// });
 
-// require('./config/passport')(passport);
-// app.use(cookieParser());
-// app.use(bodyParser());
-// app.set('view engine', 'ejs');
-// app.use(session({
-//     secret: 'myamazingapp'
-// }));
-// app.use(passport.initialize());
-// app.use(passport.session());
-// app.use(flash());
-
-// routes
-// require('./app/routes/main_routes.js')(app, passport); // load routes
-
-// launch
-// app.listen(port);
 console.log('The magic happens on port ' + port);
