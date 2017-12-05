@@ -3,7 +3,7 @@ function do_routes($routeProvider) {
     console.log('doing frontend routes');
     $routeProvider.when(
         '/login', {
-            templateUrl: 'partials/login.html', // check is correct route?
+            templateUrl: 'views/login.ejs', // check is correct route?
             controller: 'login_controller'
         })
         .when(
