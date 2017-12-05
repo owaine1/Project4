@@ -13,21 +13,20 @@ console.log('loaded frontend_app');
 // });
 // }
 
-
 var frontend_app = angular.module('git-app', ['ngRoute']);
 console.log('loaded frontend_app still');
 frontend_app.controller(main_view);
 
 function main_view($scope) {
     console.log('loaded frontend_app even still');
-    console.log('looking at main-view func');
+    console.log('looking at main_view func');
     // $scope.person = { name: "AMMMAZZING" };
 }
 
 // not my code. borrowed
+// Most based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
 (function () {
     'use strict';
-    // Some Based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
     angular
         .module('git-app', ['ngRoute', 'gm.dragDrop'])
         .run(run);

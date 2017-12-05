@@ -7,7 +7,7 @@ router.get('/', do_homepage);
 
 function do_homepage(req, res) {
     console.log('do homepage');
-    res.render('main-view');
+    res.render('main_view');
 }
 
 // authorization
