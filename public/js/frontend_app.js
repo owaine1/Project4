@@ -30,7 +30,7 @@ console.log('loaded frontend_app');
 //         $scope.myWelcome = response.data;
 //     });
 // });
-// N.B. from Angjs 1.3 functions are not 
+// N.B. from Angjs 1.3 onwards, functions are not automatically run (in ref to seeing older code online).
 // not my code. borrowed and adapted
 // Most based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
 (function () {
