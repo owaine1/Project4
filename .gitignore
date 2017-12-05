@@ -3,3 +3,7 @@ db
 mongo/creds.js
 TODOS.txt
 package-lock.json
+creds.js
+auth.js
+config/database.js
+config/auth.js

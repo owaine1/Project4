@@ -2,6 +2,7 @@ var express = require('express');
 var backend_app = express();
 var bodyParser = require('body-parser');
 var routes = require('./routes/main_routes');
+var cors = require('cors');
 var port = 3500;
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
@@ -21,6 +22,7 @@ backend_app.use(bodyParser.urlencoded({
 }));
 
 backend_app.use(bodyParser.json());
+backend_app.use(cors());
 backend_app.use(routes);
 
 backend_app.listen(port, listening);

@@ -19,8 +19,16 @@ console.log('loaded frontend_app');
     'use strict';
     // Some Based on myDraggable/mash-up - https://docs.angularjs.org/guide/directive
     angular
-        .module('git-app', ['gm.dragDrop'])
+        .module('git-app', ['ngRoute', 'gm.dragDrop'])
         .run(run);
+        // to implement
+        // frontend_app.config(do_routes);
+        // frontend_app.controller('home_controller', do_home_controller);
+        // frontend_app.controller('login_controller', do_login_controller);
+        
+        // function do_login($scope, $http) {
+            
+        // }
     function run($rootScope, $filter) {
         $rootScope.categories = [
             {
