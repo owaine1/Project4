@@ -4,39 +4,10 @@
 
     <body>
         <h1>Settings</h1>
-        <!-- navbars top right -->
-        <!-- on click buttons should go to a btn-default bootstrap -->
-        <div class="level_1 nav-buttons">
-            <div class="level_2">
-                <div class="level_3">
-                    <a href="index.html">
-                        <button ng-route="" class="btn btn-primary btn-lg" title="https://github.com/owaine1">GitHub</button>
-                    </a>
-                </div>
-                <div class="level_3">
-                    <a href="gists.html">
-                        <button class="btn btn-info btn-lg" title="https://gist.github.com/">Gists</button>
-                    </a>
-                </div>
-            </div>
-            <div class="level_2">
-                <div class="level_3">
-                    <a href="help.html">
-                        <button class="btn btn-info btn-lg" title="https://help.github.com/">Help</button>
-                    </a>
-                </div>
-                <div class="level_3">
-                    <a href="signout.html">
-                        <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item dropdown-signout
-                    &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt;
-                            Sign out
-                            &lt;/button&gt;">Sign out</button>
-                    </a>
-                </div>
-            </div>
-        </div>
+        <% include ../partials/main-nav.ejs %>
+        
   <!-- ng-class="box-{{$index}} " use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences??? also more beneficial on the settings page-->
-  
+
         <!-- ***** THE 6 WINDOWS ***** -->
 
         <div class="view_level_2">

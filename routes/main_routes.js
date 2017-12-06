@@ -4,9 +4,9 @@ var passport = require('../mongodb/passport');
 module.exports = router;
 
 router.get('/', do_homepage);
-router.get('/settings', do_settings);
 router.get('/gists', do_gists);
 router.get('/help', do_help);
+router.get('/settings', do_settings);
 router.get('/logout', do_logout);
 
 function do_homepage(req, res) {
