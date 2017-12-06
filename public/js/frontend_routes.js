@@ -22,8 +22,8 @@ function do_routes($routeProvider) {
         })
         .when(
         '/', {
-            templateUrl: 'views/main_view.ejs',
-            controller: 'main_view_controller'
+            templateUrl: 'views/home.ejs',
+            controller: 'home_view_controller'
         })
         .when(
         '/help', {
@@ -32,8 +32,8 @@ function do_routes($routeProvider) {
         })
         
         .when(
-        '/repos-main-page', {
-            templateUrl: 'views/repos_view.ejs',
+        '/repos', {
+            templateUrl: 'views/repos.ejs',
             controller: 'repos_view_controller'
         })
         // .when(
@@ -51,7 +51,7 @@ function do_routes($routeProvider) {
 // Likely add or take away from this...
 // gists.ejs X
 // help.ejs X
-// main - view.ejs X
-// repos - view.ejs X
+// home.ejs X
+// repos.ejs X
 // settings.ejs X
 // signout.ejs X
