@@ -5,6 +5,7 @@ var routes = require('./routes/main_routes');
 var cors = require('cors');
 var port = 3500;
 var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
 // var passport = require('passport');
 var flash = require('connect-flash');
 
