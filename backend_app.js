@@ -29,6 +29,3 @@ backend_app.listen(port, listening);
 function listening() {
     console.log('broadcasting on localhost:' + port);
 }
-
-
-console.log('The magic happens on port ' + port);
