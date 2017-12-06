@@ -36,11 +36,11 @@ function do_routes($routeProvider) {
             templateUrl: 'views/repos_view.ejs',
             controller: 'repos_view_controller'
         })
-        .when(
-        '/settings', {
-            templateUrl: 'settings.ejs',
-            controller: 'settings_controller'
-        })
+        // .when(
+        // '/settings', {
+        //     templateUrl: 'settings.ejs',
+        //     controller: 'settings_controller'
+        // })
         .when(
         '/logout', {
             templateUrl: 'views/logout.ejs',

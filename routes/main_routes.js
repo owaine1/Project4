@@ -4,10 +4,20 @@ var passport = require('../mongodb/passport');
 module.exports = router;
 
 router.get('/', do_homepage);
+router.get('/settings', do_settings);
+router.get('/gists', do_gists);
 
 function do_homepage(req, res) {
     console.log('do homepage');
     res.render('main_view');
+}
+function do_settings(req, res) {
+    console.log('doing settings');
+    res.render('settings');
+}
+function do_gists(req, res) {
+    console.log('doing gists');
+    res.render('gists');
 }
 
 // authorization
