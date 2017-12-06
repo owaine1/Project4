@@ -93,13 +93,6 @@ div .view_level_3 {
 
 /* ZZZZZ drag and drop */
 
-div h3 {
-    display: inline-block;
-    position: absolute;
-    top: 100%;
-    right: 50%
-}
-
 
 /* .level_3 {
         flex-direction: column;
