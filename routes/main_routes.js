@@ -8,6 +8,8 @@ router.get('/gists', do_gists);
 router.get('/help', do_help);
 router.get('/settings', do_settings);
 router.get('/logout', do_logout);
+router.get('/repos', do_repos);
+router.get('/contributions', do_contributions);
 
 function do_homepage(req, res) {
     console.log('do homepage');
@@ -26,6 +28,14 @@ function do_help(req, res) {
     res.render('help');
 }
 function do_logout(req, res) {
+    console.log('doing logout');
+    res.render('logout');
+}
+function do_repos(req, res) {
+    console.log('doing logout');
+    res.render('logout');
+}
+function do_contributions(req, res) {
     console.log('doing logout');
     res.render('logout');
 }
