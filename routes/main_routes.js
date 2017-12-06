@@ -6,6 +6,8 @@ module.exports = router;
 router.get('/', do_homepage);
 router.get('/settings', do_settings);
 router.get('/gists', do_gists);
+router.get('/help', do_help);
+router.get('/logout', do_logout);
 
 function do_homepage(req, res) {
     console.log('do homepage');
@@ -18,6 +20,14 @@ function do_settings(req, res) {
 function do_gists(req, res) {
     console.log('doing gists');
     res.render('gists');
+}
+function do_help(req, res) {
+    console.log('doing help');
+    res.render('help');
+}
+function do_logout(req, res) {
+    console.log('doing logout');
+    res.render('logout');
 }
 
 // authorization

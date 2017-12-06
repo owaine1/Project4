@@ -2,14 +2,9 @@
 <html lang="en" ng-app="git-app">
 
 <% include ../partials/header.ejs %>
-
     <!-- <body ng-controller="main_view_controller"> -->
-
     <body>
         <h1>Github interface using API (eventually!)</h1>
-        <h2>{{person.name}}</h2>
-        <!-- navbars top right -->
-        <!-- on click buttons should go to a btn-default bootstrap -->
         <div class="level_1 nav-buttons">
             <div class="level_2">
                 <div class="level_3">
@@ -25,15 +20,15 @@
             </div>
             <div class="level_2">
                 <div class="level_3">
-                    <!-- <a href="help.ejs "> -->
-                    <button class="btn btn-info btn-lg" title="https://help.github.com/ ">Help</button>
-                    <!-- </a> -->
+                    <a href="/help">
+                        <button class="btn btn-info btn-lg">Help</button>
+                    </a>
                 </div>
                 <div class="level_3">
-                    <!-- <a href="signout.html"> -->
-                    <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item
-        dropdown-signout &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt; Sign out &lt;/button&gt;">Sign out</button>
-                    <!-- </a> -->
+                    <a href="/logout">
+                        <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item
+        dropdown-signout &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt; Sign out &lt;/button&gt;">Log out</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -46,7 +41,7 @@
                 <code>gm-on-hover</code> to apply logic and reorder items. Also demonstrates drag area using
                 <code>gm-drag-handle</code>
             </p> -->
-            <!-- ng-class="box-{{$index}} " use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences???-->
+            <!-- ng-class="box-{{$index}} " use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences??? also more beneficial on the settings page-->
             <!-- look at https://www.w3schools.com/angular/angular_routing.asp -->
             <div class="list-group">
                 <div class="view_level_3" ng-repeat="item in orderedItems | orderBy: 'order'" gm-draggable="item" gm-on-invalid-drop="reset"

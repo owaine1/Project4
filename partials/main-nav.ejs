@@ -1,23 +1,37 @@
 <!-- navbars top right -->
     <!-- on click buttons should go to a btn-default bootstrap -->
+    <%= 
+    window.onload = function() {
+        if (window.location.href.indexOf('/my/url')) {
+          //Hide the element.
+          document.querySelectorAll('.sidebar-item')[0].style.display = 'none';
+        }
+      };
+%>
     <div class="level_1 nav-buttons">
             <div class="level_2">
                 <div class="level_3">
-                    <button ng-route="" class="btn btn-primary btn-lg" title="https://github.com/owaine1">GitHub</button>
+                    <a href="/settings">
+                        <button ng-route="" class="btn btn-primary btn-lg">Settings</button>
+                    </a>
                 </div>
                 <div class="level_3">
-                    <button class="btn btn-info btn-lg" title="https://gist.github.com/">Gists</button>
+                    <a href="/gists">
+                        <button class="btn btn-info btn-lg">Gists</button>
+                    </a>
                 </div>
             </div>
             <div class="level_2">
                 <div class="level_3">
-                    <button class="btn btn-info btn-lg" title="https://help.github.com/">Help</button>
+                    <a href="/help">
+                        <button class="btn btn-info btn-lg">Help</button>
+                    </a>
                 </div>
                 <div class="level_3">
-                    <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item dropdown-signout
-                    &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt;
-                            Sign out
-                            &lt;/button&gt;">Sign out</button>
+                    <a href="/logout">
+                        <button class="tn btn-primary btn-lg" title="&lt;button type=&quot; submit &quot; class=&quot;dropdown-item
+        dropdown-signout &quot; data-ga-click=&quot; Header, sign out, icon:logout &quot;&gt; Sign out &lt;/button&gt;">Log out</button>
+                    </a>
                 </div>
             </div>
         </div>
