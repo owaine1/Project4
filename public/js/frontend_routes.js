@@ -30,7 +30,6 @@ function do_routes($routeProvider) {
             templateUrl: 'views/help.ejs',
             controller: 'help_controller'
         })
-        
         .when(
         '/repos', {
             templateUrl: 'views/repos.ejs',
