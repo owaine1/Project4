@@ -6,7 +6,8 @@
 
     <body>
         <h1>Github interface using API (eventually!)</h1>
-        <div class="level_1 nav-buttons">
+        <% include ../partials/main-nav.ejs %>
+            <!-- <div class="level_1 nav-buttons">
             <div class="level_2">
                 <div class="level_3">
                     <a href="/settings">
@@ -32,55 +33,55 @@
                     </a>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <!-- 4 main views -->
-        <div class="container">
-            <h3>gm.dragDrop</h3>
-            <h3>Reordering</h3>
-            <!--<p>Demonstrates using
+            <!-- 4 main views -->
+            <div class="container">
+                <h3>gm.dragDrop</h3>
+                <h3>Reordering</h3>
+                <!--<p>Demonstrates using
                 <code>gm-on-hover</code> to apply logic and reorder items. Also demonstrates drag area using
                 <code>gm-drag-handle</code>
             </p> -->
-            <!-- ng-class="box-{{$index}} " use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences??? also more beneficial on the settings page-->
-            <!-- look at https://www.w3schools.com/angular/angular_routing.asp -->
-            <div class="list-group">
-                <div class="view_level_3" ng-repeat="item in orderedItems | orderBy: 'order'" gm-draggable="item" gm-on-invalid-drop="reset"
-                    gm-on-drop="reorder" gm-on-hover="onHover(item)">
-                    {{item.value}}
-                    <div class="pull-right gm-drag-handle">
-                        <span class="glyphicon glyphicon-move"></span>
+                <!-- ng-class="box-{{$index}} " use this to have unique classes for the iterations of the repeat. Thinking of responsive and saving those to database as user preferences??? also more beneficial on the settings page-->
+                <!-- look at https://www.w3schools.com/angular/angular_routing.asp -->
+                <div class="list-group">
+                    <div class="view_level_3" ng-repeat="item in orderedItems | orderBy: 'order'" gm-draggable="item" gm-on-invalid-drop="reset"
+                        gm-on-drop="reorder" gm-on-hover="onHover(item)">
+                        {{item.value}}
+                        <div class="pull-right gm-drag-handle">
+                            <span class="glyphicon glyphicon-move"></span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="view_level_1">
-            <div class="view_level_2">
-                <div id="view1 " class="view_level_3" ng-view>
-                    <h3 class="title">Repositories</h3>
-                    <div class="inside "></div>
+            <div class="view_level_1">
+                <div class="view_level_2">
+                    <div id="view1 " class="view_level_3" ng-view>
+                        <h3 class="title">Repositories</h3>
+                        <div class="inside "></div>
+                    </div>
+                    <div id="view2 " class="view_level_3" ng-view>Contributions
+                        <div class="inside "></div>
+                    </div>
                 </div>
-                <div id="view2 " class="view_level_3" ng-view>Contributions
-                    <div class="inside "></div>
+                <div class="view_level_2">
+                    <div id="view3 " class="view_level_3" ng-view>Followers
+                        <div class="inside "></div>
+                    </div>
+                    <div id="view4 " class="view_level_3" ng-view>Following
+                        <div class="inside"></div>
+                    </div>
                 </div>
             </div>
-            <div class="view_level_2">
-                <div id="view3 " class="view_level_3" ng-view>Followers
-                    <div class="inside "></div>
-                </div>
-                <div id="view4 " class="view_level_3" ng-view>Following
-                    <div class="inside"></div>
-                </div>
-            </div>
-        </div>
-        <p>Additional functionality (likely as an additional features)
-            <br>Likely if can use some angular directives like:
-            <br>ngmodel
-            <br>ngclick (obviously) also function on a click
-            <br>ngrepeat in someway (mostlikely a list/table), could be selecting (or creating) tags and showing popularity from
-            api as a type of top 10 with number of repos using x technology (e.g. react, angular/whatever???
-        </p>
+            <p>Additional functionality (likely as an additional features)
+                <br>Likely if can use some angular directives like:
+                <br>ngmodel
+                <br>ngclick (obviously) also function on a click
+                <br>ngrepeat in someway (mostlikely a list/table), could be selecting (or creating) tags and showing popularity
+                from api as a type of top 10 with number of repos using x technology (e.g. react, angular/whatever???
+            </p>
     </body>
 
 </html>
