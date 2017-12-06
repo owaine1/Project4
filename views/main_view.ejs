@@ -4,6 +4,7 @@
 <% include ../partials/header.ejs %>
 
     <!-- <body ng-controller="main_view_controller"> -->
+
     <body>
         <h1>Github interface using API (eventually!)</h1>
         <h2>{{person.name}}</h2>
@@ -40,9 +41,9 @@
 
         <!-- main 4 views -->
         <div class="container">
-            <h1>gm.dragDrop</h1>
-            <!-- <h4>Reordering</h4>
-            <p>Demonstrates using
+            <h3>gm.dragDrop</h3>
+            <h3>Reordering</h3>
+            <!--<p>Demonstrates using
                 <code>gm-on-hover</code> to apply logic and reorder items. Also demonstrates drag area using
                 <code>gm-drag-handle</code>
             </p> -->
@@ -61,7 +62,8 @@
 
         <div class="view_level_1">
             <div class="view_level_2">
-                <div id="view1 " class="view_level_3" ng-view>Repositories
+                <div id="view1 " class="view_level_3" ng-view>
+                    <h3 class="title">Repositories</h3>
                     <div class="inside "></div>
                 </div>
                 <div id="view2 " class="view_level_3" ng-view>Contributions
@@ -81,7 +83,8 @@
             <br>Likely if can use some angular directives like:
             <br>ngmodel
             <br>ngclick (obviously) also function on a click
-            <br>ngrepeat in someway (mostlikely a list/table), could be selecting (or creating) tags and showing popularity from api as a type of top 10 with number of repos using x technology (e.g. react, angular/whatever???
+            <br>ngrepeat in someway (mostlikely a list/table), could be selecting (or creating) tags and showing popularity from
+            api as a type of top 10 with number of repos using x technology (e.g. react, angular/whatever???
         </p>
     </body>
 

@@ -16,6 +16,12 @@ form {
     background-color: #eee;
 }
 
+.glyphicon {
+    position: relative;
+    bottom: 100%;
+    right: 100%;
+}
+
 @media (min-width: 768px) {
     body {
         background-color: rgb(226, 245, 234)
@@ -62,6 +68,39 @@ div .view_level_3 {
 }
 
 
+/* drag and drop css */
+
+.gm-drag-element {
+    opacity: 0.3;
+}
+
+.gm-dragging {
+    background-color: lightgrey;
+}
+
+.gm-drag-handle {
+    cursor: grab;
+}
+
+.panel.gm-dropping {
+    box-shadow: 0px 0px 2px black;
+}
+
+.list.group {
+    display: inline-block;
+}
+
+
+/* ZZZZZ drag and drop */
+
+div h3 {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    right: 50%
+}
+
+
 /* .level_3 {
         flex-direction: column;
         position: absolute;
@@ -98,23 +137,3 @@ div .view_level_3 {
         padding-left: 80px;
     }
 } */
-
-.gm-drag-element {
-    opacity: 0.3;
-}
-
-.gm-dragging {
-    background-color: lightgrey;
-}
-
-.gm-drag-handle {
-    cursor: grab;
-}
-
-.panel.gm-dropping {
-    box-shadow: 0px 0px 2px black;
-}
-
-.list.group {
-    display: inline-block;
-}
