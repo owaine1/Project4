@@ -2,10 +2,20 @@
 <html lang="en" ng-app="git-app">
 <% include ../partials/header.ejs %>
 
-    <body>
 
+    <body>
+        <script>
+            console.log('hello');
+            window.onload = function () {
+                if (window.location.href.indexOf('/test')) {
+                    console.log('hello');
+                    //Hide the element.
+                    document.querySelectorAll('.test')[0].style.display = 'none';
+                }
+            };
+        </script>
         <% include ../partials/main-nav.ejs %>
-            <h1 class="test">test hidden</h1>
+            <p class="test">test hidden</p>
             <h1>test shown</h1>
             <div class="level_1 nav-buttons">
                 <div class="level_2">
