@@ -11,7 +11,7 @@ router.get('/logout', do_logout);
 
 function do_homepage(req, res) {
     console.log('do homepage');
-    res.render('home');
+    res.render('test');
 }
 function do_settings(req, res) {
     console.log('doing settings');
