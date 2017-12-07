@@ -42,6 +42,8 @@ function do_contributions(req, res) {
     console.log('doing contributions');
     res.render('contributions');
 }
+// data stuff. API for github...
+
 
 // authorization
 router.get('/api/v1/auth', passport.authenticate('github', {
