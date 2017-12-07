@@ -1,0 +1,26 @@
+<div ng-controller="reps_controller">
+    <h2>Repositories</h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    name
+                </th>
+                <th>
+                    link
+                </th>
+            </tr>
+        </thead>
+        <tbody ng-repeat="rep in reps" gmDraggable="rep" gm-on-invalid-drop='reset' gm-on-drop='reorder' gm-on-hover='onHover(rep)'>
+            <tr>
+                <td>{{rep.name}}</td>
+                <td>
+                    <a href="{{rep.html_url}}">{{rep.html_url}}</a>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+
+</div>

@@ -12,10 +12,11 @@ function make_router(passport) {
     router.get('/logout', do_logout);
     router.get('/repos', do_repos);
     router.get('/contributions', do_contributions);
+    router.get('/reps', do_reps);
 
     function do_homepage(req, res) {
         console.log('do homepage');
-        res.render('home');
+        res.render('home'); //was res.sendFile('home');
     }
     function do_settings(req, res) {
         console.log('doing settings');
@@ -41,10 +42,14 @@ function make_router(passport) {
         console.log('doing contributions');
         res.render('contributions');
     }
-    
+    function do_reps(req, res) {
+        console.log('doing reps page test');
+        res.render('reps');
+    }
+
     // data stuff. API for github...
-    router.get('/api/v1/github_data', do_github_data);
-    router.get('/api/v1/repositories', do_repositories);
+    router.get('/api/v1/github_data', do_github_data); // no route for github_data
+    router.get('/api/v1/repositories', do_repositories); // no route for repositories
 
     function do_github_data(req, res) {
         console.log('doing backend github data');
@@ -54,7 +59,7 @@ function make_router(passport) {
         console.log(req.user.profileUrl);
 
         var options = {
-            url: 'https://api.github.com/user/repos?access_token=' + req.user.acessToken,
+            url: 'https://api.github.com/user/repos?access_token=' + req.user.accessToken,
             headers: {
                 'User-Agent': 'request'
             }
@@ -70,7 +75,7 @@ function make_router(passport) {
 
         // max 100 repos per page (github limit)
         var options = {
-            url: 'https://api.github.com/user/repos?access_token=' + req.user.acessToken + '&per_page=100&page=1',
+            url: 'https://api.github.com/user/repos?access_token=' + req.user.accessToken + '&per_page=100&page=1',
             headers: {
                 'User-Agent': 'request'
             }
@@ -104,10 +109,11 @@ function make_router(passport) {
     router.get('/api/v1/logout', function (req, res) {
         req.logout();
         res.redirect('/#!/');
-    })
+    });
     return router;
 }
 module.exports = make_router;
+
 // api database stuff. This likely needs to be in another file! Whopeee!
 // router.get('/api/v1/read/', do_read);
 // router.post('/api/v1/create/', do_create);

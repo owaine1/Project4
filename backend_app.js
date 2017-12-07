@@ -1,12 +1,12 @@
 var express = require('express');
 var backend_app = express();
 var bodyParser = require('body-parser');
+var passport = require('passport');
 var routes = require('./routes/main_routes')(passport);
 var cors = require('cors');
 var port = 3500;
 var mongoose = require('mongoose');
 mongoose.Promise = require('bluebird');
-var passport = require('passport');
 var flash = require('connect-flash');
 
 backend_app.set('view engine', 'ejs');

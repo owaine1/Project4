@@ -47,10 +47,3 @@ function do_routes($routeProvider) {
         });
 }
 
-// Likely add or take away from this...
-// gists.ejs X
-// help.ejs X
-// home.ejs X
-// repos.ejs X
-// settings.ejs X
-// signout.ejs X

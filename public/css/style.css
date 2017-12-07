@@ -74,7 +74,7 @@ div .view_level_3 {
     position: relative;
     height: 0;
     padding-bottom: 70%;
-    /* This should be changed to match the aspect ratio of your video */
+    /* This should be changed to match the aspect ratio of your frame / view */
 }
 
 iframe {
