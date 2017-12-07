@@ -43,6 +43,36 @@ function do_contributions(req, res) {
     res.render('contributions');
 }
 // data stuff. API for github...
+router.get('/api/v1/github_data', do_github_data);
+router.get('/api/v1/repositories', do_repositories);
+
+function do_github_data(req, res) {
+    console.log('doing backend github data');
+    console.log(req.user.id);
+    console.log(req.user.displayName);
+    console.log(req.user.username);
+    console.log(req.user.profileUrl);
+
+    var options = {
+        url: 'https://api.github.com/user/repos?access_token=' + req.user.acessToken,
+        headers: {
+            'User-Agent': 'request'
+        }
+    }
+    function callback(err, response, body) {
+        if (err) console.log(err);
+        res.json(JSON.parse(body));
+      }
+      request(options, callback);
+}
+function do_repositories(req, res){
+    console.log('doing repositories');
+
+    // max 100 repos per page (github limit)
+    var options = {
+        url: 'https://api.github.com/user/repos?access_token=' + req.user.acessToken + '&per_page=100&page=1'
+    }
+}
 
 
 // authorization
