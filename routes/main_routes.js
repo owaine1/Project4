@@ -1,8 +1,11 @@
+function make_router(passport){
 var router = require('express').Router();
-var passport = require('../mongodb/passport');
+var passport = require('../mongodb/passport')(passport);
+var request = require('request');
 // var GITHUBUSERCLASS = require('../mongodb/mongoose_connection');
-module.exports = router;
 
+
+// internal routes
 router.get('/', do_homepage);
 router.get('/gists', do_gists);
 router.get('/help', do_help);
@@ -32,12 +35,12 @@ function do_logout(req, res) {
     res.render('logout');
 }
 function do_repos(req, res) {
-    console.log('doing logout');
-    res.render('logout');
+    console.log('doing repos');
+    res.render('repos');
 }
 function do_contributions(req, res) {
-    console.log('doing logout');
-    res.render('logout');
+    console.log('doing contributions');
+    res.render('contributions');
 }
 
 // authorization
@@ -47,17 +50,26 @@ router.get('/api/v1/auth', passport.authenticate('github', {
 
 router.get('/api/v1/git_callback',
     passport.authenticate('github', {
-        failureRedirect: '/'
+        failureRedirect: '/#!/login'
     }), do_authenticated);
 
 function do_authenticated(req, res) {
-    console.log('authenticated!');
+    console.log('Yes you\'re logged in!');
+    console.log(req.params);
     // Successful authentication, redirect.
     res.json({
-        message: 'authenticated - proceed!'
+        message: 'Logged in successfully!'
     });
+    res.redirect('/#!/logged_in');
 }
-// api
+router.get('/api/v1/logout', function (req, res){
+    req.logout();
+    res.redirect('/#!/');
+})
+return router;
+}
+module.exports = make_router;
+// api database stuff. This likely needs to be in another file! Whopeee!
 // router.get('/api/v1/read/', do_read);
 // router.post('/api/v1/create/', do_create);
 // router.put('/api/v1/update/', do_update);
