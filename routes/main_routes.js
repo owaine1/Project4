@@ -4,7 +4,6 @@ function make_router(passport) {
     var request = require('request');
     // var GITHUBUSERCLASS = require('../mongodb/mongoose_connection');
 
-
     // internal routes
     router.get('/', do_homepage);
     router.get('/gists', do_gists);
@@ -42,6 +41,7 @@ function make_router(passport) {
         console.log('doing contributions');
         res.render('contributions');
     }
+    
     // data stuff. API for github...
     router.get('/api/v1/github_data', do_github_data);
     router.get('/api/v1/repositories', do_repositories);
