@@ -70,7 +70,8 @@ function do_repositories(req, res){
 
     // max 100 repos per page (github limit)
     var options = {
-        url: 'https://api.github.com/user/repos?access_token=' + req.user.acessToken + '&per_page=100&page=1'
+        url: 'https://api.github.com/user/repos?access_token=' + req.user.acessToken + '&per_page=100&page=1',
+        headers
     }
 }
 
