@@ -1,6 +1,6 @@
 console.log('loaded frontend_app');
-var frontend_app = angular.module('git-app', ['ngRoute', 'gm.dragDrop']);
-frontend_app.config(do_routes);
+var frontend_app = angular.module('git-app', ['ngRoute']);
+// frontend_app.config(do_routes);
 frontend_app.controller('reps_controller', do_reps_controller);
 
 // my code

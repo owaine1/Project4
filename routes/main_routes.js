@@ -49,7 +49,7 @@ function make_router(passport) {
 
     // data stuff. API for github...
     router.get('/api/v2/github_data', do_github_data); // no route for github_data
-    router.get('/api/v2/repositories', do_repositories); // no route for repositories
+    router.get('/api/v2/reps', do_repositories); // no route for repositories
     router.delete('/api/v2/delete/:id');
 
     function do_github_data(req, res) {
