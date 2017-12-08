@@ -48,8 +48,9 @@ function make_router(passport) {
     }
 
     // data stuff. API for github...
-    router.get('/api/v1/github_data', do_github_data); // no route for github_data
-    router.get('/api/v1/repositories', do_repositories); // no route for repositories
+    router.get('/api/v2/github_data', do_github_data); // no route for github_data
+    router.get('/api/v2/repositories', do_repositories); // no route for repositories
+    router.delete('/api/v2/delete/:id');
 
     function do_github_data(req, res) {
         console.log('doing backend github data');
@@ -88,11 +89,11 @@ function make_router(passport) {
     }
 
     // authorization
-    router.get('/api/v1/auth', passport.authenticate('github', {
+    router.get('/api/v2/auth', passport.authenticate('github', {
         scope: ['user:email']
     }));
 
-    router.get('/api/v1/git_callback',
+    router.get('/api/v2/git_callback',
         passport.authenticate('github', {
             failureRedirect: '/#!/login'
         }), do_authenticated);
@@ -106,7 +107,7 @@ function make_router(passport) {
         });
         res.redirect('/#!/logged_in');
     }
-    router.get('/api/v1/logout', function (req, res) {
+    router.get('/api/2/logout', function (req, res) {
         req.logout();
         res.redirect('/#!/');
     });
@@ -114,10 +115,9 @@ function make_router(passport) {
 }
 module.exports = make_router;
 
-// api database stuff. This likely needs to be in another file! Whopeee!
-// router.get('/api/v1/read/', do_read);
-// router.post('/api/v1/create/', do_create);
-// router.put('/api/v1/update/', do_update);
-
+// api database stuff. This likely needs to be in another file, for adding mongodb communication, adding users' preferences to the database and saving them for their next loggin! Whopeee!
+// router.get('/api/2/read/', do_read);
+// router.post('/api/v2/create/', do_create);
+// router.put('/api/v2/update/', do_update);
 // need read, create and update functions.
 // but need to understand what the schema looks like first

@@ -9,6 +9,8 @@
 // .otherwise({ redirectTo: '/' });
 // });
 function do_routes($routeProvider) {
+    $httpProvider.defaults.withCredentials = true;
+
     console.log('doing frontend routes');
     $routeProvider.when(
         '/login', {
