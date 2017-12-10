@@ -16,14 +16,6 @@ function github_routes(app, passport) {
             successRedirect: '/profile',
             failureRedirect: '/'
         }));
-    // unlink don't think I want so will delete later
-    // app.get('/unlink/github', function (req, res) {
-    //     var user = req.user;
-    //     user.github.token = undefined;
-    //     user.save(function (err) {
-    //         res.redirect('/profile');
-    //     });
-    // });
 }
 module.exports = github_routes;
 

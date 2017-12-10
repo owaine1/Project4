@@ -6,9 +6,7 @@
         <h1>Github interface using API (eventually!)</h1>
         <% include ../partials/main-nav.ejs %>
             <!-- 4 main views -->
-            <a href="/reps">
-                <button>repositories test</button>
-            </a>
+
             <div class="container">
                 <h3>gm.dragDrop</h3>
                 <h3>Reordering</h3>
@@ -31,7 +29,9 @@
                 <div class="view_level_2">
                     <a href="#">
                         <div id="view1 " class="view_level_3">
-                            <h3 class="title">Repositories</h3>
+                            <a href="/reps">
+                                <h2>Repositories</h2>
+                            </a>
                             <div class="inside "></div>
                         </div>
                     </a>
@@ -54,8 +54,8 @@
                 <br>Likely if can use some angular directives like:
                 <br>ngmodel
                 <br>ngclick (obviously) also function on a click
-                <br>ngrepeat in someway (mostlikely a list/table), could be selecting (or creating) tags and showing popularity
-                from api as a type of top 10 with number of repos using x technology (e.g. react, angular/whatever???
+                <br>ngrepeat in someway (most likely a list/table), could be selecting (or creating) tags and showing popularity
+                from api as a type of top 10 with number of repos using angular
             </p>
     </body>
 

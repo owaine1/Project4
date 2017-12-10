@@ -1,118 +1,115 @@
-body {
-    background-color: lightgreen;
-}
-
-h1 {
-    position: center;
-    color: rgb(45, 99, 45);
-}
-
-form {
-    position: absolute;
-    margin: auto;
-    right: 50%;
-    border: 5px solid #ccc;
-    border-radius: 20px;
-    background-color: #eee;
-}
-
-.glyphicon {
-    position: relative;
-    bottom: 100%;
-    right: 100%;
-}
-
-@media (min-width: 768px) {
     body {
-        background-color: rgb(226, 245, 234)
+        background-color: lightgreen;
     }
-    .nav-buttons {
-        flex-direction: column;
+
+    h1 {
+        position: center;
+        color: rgb(45, 99, 45);
+    }
+
+    form {
         position: absolute;
-        top: 0;
-        right: 0%;
+        margin: auto;
+        right: 50%;
+        border: 5px solid #ccc;
+        border-radius: 20px;
+        background-color: #eee;
     }
-}
 
-.btn {
-    width: 100px
-}
+    a {
+        display: block;
+    }
 
-.view_level_1 {
-    display: inline-flex;
-    clear: both;
-}
+    .glyphicon {
+        position: relative;
+        bottom: 100%;
+        right: 100%;
+    }
 
-div .view_level_3 {
-    border: 1px solid black;
-    border-radius: 30px;
-    background-color: lightblue;
-    position: relative;
-    top: 20%;
-    left: 50%;
-    margin: 10px;
-    width: 250px;
-    height: 250px;
-}
+    .btn {
+        width: 100px
+    }
 
-.empty {
-    display: inline-block;
-    border: dashed 5px black;
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-}
+    .view_level_1 {
+        display: inline-flex;
+        clear: both;
+    }
 
-.deselected {
-    display: flex-inline;
-}
+    div .view_level_3 {
+        border: 1px solid black;
+        border-radius: 30px;
+        background-color: lightblue;
+        position: relative;
+        top: 20%;
+        left: 50%;
+        margin: 10px;
+        width: 250px;
+        height: 250px;
+        display: block;
+    }
 
+    .empty {
+        display: inline-block;
+        border: dashed 5px black;
+        border-radius: 10px;
+        width: 150px;
+        height: 50px;
+    }
 
-/* The embedded web pages! */
+    .deselected {
+        display: flex-inline;
+    }
+    /* The embedded web pages! */
 
-.frame-container {
-    position: relative;
-    height: 0;
-    padding-bottom: 70%;
-    /* This should be changed to match the aspect ratio of your frame / view */
-}
+    .frame-container {
+        position: relative;
+        height: 0;
+        padding-bottom: 70%;
+        /* This should be changed to match the aspect ratio of your frame / view */
+    }
 
-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
+    iframe {
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 
+    @media (min-width: 768px) {
+        body {
+            background-color: rgb(226, 245, 234)
+        }
+        .nav-buttons {
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            right: 0%;
+        }
+    }
+    /* drag and drop css */
 
-/* drag and drop css */
+    .gm-drag-element {
+        opacity: 0.3;
+    }
 
-.gm-drag-element {
-    opacity: 0.3;
-}
+    .gm-dragging {
+        background-color: lightgrey;
+    }
 
-.gm-dragging {
-    background-color: lightgrey;
-}
+    .gm-drag-handle {
+        cursor: grab;
+    }
 
-.gm-drag-handle {
-    cursor: grab;
-}
+    .panel.gm-dropping {
+        box-shadow: 0px 0px 2px black;
+    }
 
-.panel.gm-dropping {
-    box-shadow: 0px 0px 2px black;
-}
-
-.list.group {
-    display: inline-block;
-}
-
-
-/* ZZZZZ drag and drop */
-
-
-/* .level_3 {
+    .list.group {
+        display: inline-block;
+    }
+    /* ZZZZZ drag and drop */
+    /* .level_3 {
         flex-direction: column;
         position: absolute;
         top: 0;
