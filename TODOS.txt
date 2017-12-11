@@ -1,0 +1,60 @@
+30 Nov evening
+db/mongoose_connect.js DONE but might need refinement
+
+// TODO likely strip whole code down to 1 single page of ejs, without login, with the 60 limited requests.
+// re-read agin the githubapi documentation https://developer.github.com/v3/guides/basics-of-authentication/
+// Action plan idea
+Possibly look at https://developer.github.com/v3/libraries/ in particular Javascript(5) though other c based (e.g. Java (3), PHP(8), Python(8)) And likely build all 5 so that they are working, play with the others.
+And just continue to build simple github APIs. Feeling as if I don't understand the basic concepts well enough
+//Pos look at passport (some 1/2 hour–1 hour long youtube videos)
+// The Net Ninja, on youtube, has 21 videos on passportjs. Maybe worthwhile going through all of them
+
+
+// TODO / IDEAS later functionality of the drag and drop to be saved / created on mongodb and this to be recalled from mongodb
+// schema would be with nested objects
+// declaring inner objects first
+// need one for on main github page // will take some time
+// Repositories
+// Conributions
+// Followers
+// Following
+//
+// one for settings page // will take a LOT of time
+// settings has 2 areas: selected 6 possible windows that you can rearrange and deselect and 5 deselected slots that you can drag and drop the windows to and from.
+// here would need 2 schemas
+// so likely need: 3 inner schemas that go into 1 main schema.
+something like, but not right (maybe the code for drag and drop itself might have answers)
+//pseudo code
+// var home_page_order = {
+  repositories: a, b, c or d,
+  contributions: a, b, c or d,
+  followers: a, b, c or d,
+  following: a, b, c or d,
+}
+var settings_page_selected = {
+profile: a, b, c, d, e, f,
+account: a, b, c, d, e, f,
+notifications: a, b, c, d, e, f,
+ssh_and_gpg_keys: a, b, c, d, e, f,
+security: a, b, c, d, e, f,
+blocked_users: a, b, c, d, e, f,
+}
+var settings_page_deselected = {
+profile: a, b, c, d, e, f,
+account: a, b, c, d, e, f,
+notifications: a, b, c, d, e, f,
+ssh_and_gpg_keys: a, b, c, d, e, f,
+security: a, b, c, d, e, f,
+blocked_users: a, b, c, d, e, f,
+}
+// there are bugs in this already. e.g. wondering if should just be booleans
+
+then 
+home_page_order
+settings_page_selected
+settings_page_deselected
+all within GITUSER in mongoose_connection.js
+
+You want on page load a get request in mainroutes.js of user preferences on login?
+
+
