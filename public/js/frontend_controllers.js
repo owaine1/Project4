@@ -9,7 +9,7 @@ function do_login_controller($scope, $http, $routeParams, $location) {
     $http.get('/api/v2/auth').then(
         function (result) {
             console.log(result);
-            $location.path('logged_in'); // up to here!
+            $location.path('logged_in');
         }
     );
 }
@@ -22,11 +22,11 @@ function do_reps_controller($scope, $http) {
     console.log('hello doing repos controller');
     $http.get('/api/v2/reps')
         .then(
-        function (results) {
-            console.log('data from github');
-            console.log(results.data);
-            $scope.reps = results.data;
-        }
+            function (results) {
+                console.log('data from github');
+                console.log(results.data);
+                $scope.reps = results.data;
+            }
         );
     // needs to be tested 08 Dec
     $scope.delete = function (rep) {

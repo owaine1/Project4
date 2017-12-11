@@ -1,10 +1,12 @@
+    /* TODO likely need to wipe this file clean. Bear in mind
+    responsive design i.e. @media (max-width: 767px) and @media(min-width: 768px).    */
     body {
-        background-color: lightgreen;
+        background-color: #90ee90;
     }
 
     h1 {
         position: center;
-        color: rgb(45, 99, 45);
+        color: #2d632d;
     }
 
     form {
@@ -36,9 +38,9 @@
     }
 
     div .view_level_3 {
-        border: 1px solid black;
+        border: 1px solid #000;
         border-radius: 30px;
-        background-color: lightblue;
+        background-color: #add8e6;
         position: relative;
         top: 20%;
         left: 50%;
@@ -50,7 +52,7 @@
 
     .empty {
         display: inline-block;
-        border: dashed 5px black;
+        border: dashed 5px #000;
         border-radius: 10px;
         width: 150px;
         height: 50px;
@@ -78,7 +80,7 @@
 
     @media (min-width: 768px) {
         body {
-            background-color: rgb(226, 245, 234)
+            background-color: #e2f5ea;
         }
         .nav-buttons {
             flex-direction: column;
@@ -94,7 +96,7 @@
     }
 
     .gm-dragging {
-        background-color: lightgrey;
+        background-color: #ccc;
     }
 
     .gm-drag-handle {
@@ -102,7 +104,7 @@
     }
 
     .panel.gm-dropping {
-        box-shadow: 0px 0px 2px black;
+        box-shadow: 0px 0px 2px #000;
     }
 
     .list.group {
